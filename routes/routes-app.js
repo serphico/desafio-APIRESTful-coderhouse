@@ -37,7 +37,6 @@ let finalProd = {};
 
 routerProducts.post('/productos',upload.single('thumbnail'), (req, res,next) => {
     const file = req.file;
-    console.log(file.originalname)
 
     if(!file){
         const error = new Error('please upload a file')

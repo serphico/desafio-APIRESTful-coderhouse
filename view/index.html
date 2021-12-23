@@ -9,9 +9,9 @@
 <body>
     <h2>Sube un nuevo producto</h2>
     <form action="/api/productos" enctype="multipart/form-data"  method="POST">
-        title <input name="title" type="text">
-        price  <input name="price" type="text">
-        <input type="file" name="thumbnail">
+        title <input name="title" type="text" required>
+        price  <input name="price" type="text" required>
+        <input type="file" name="thumbnail" required>
 
         <button>enviar</button>
     </form>

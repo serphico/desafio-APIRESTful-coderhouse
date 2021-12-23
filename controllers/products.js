@@ -77,18 +77,17 @@ class Products {
     }
 
     putData(obj,id){
-        
+
         let newId = id - 1;
         let data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        console.log(data)
         if(!data[newId]){
             let error = {"error": "El elemento no existe"}
             return error
         }else{
-            data.splice(newId,1)
-            data.splice(newId,0,obj)
+            data[newId] = obj;
             fs.writeFileSync(dataPath,JSON.stringify([data]))
             return data
-
         }
 
     }
